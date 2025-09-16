@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "playwright-tests",
   "version": "1.0.0",
   "main": "index.js",
@@ -9,4 +10,21 @@
   "author": "",
   "license": "ISC",
   "description": ""
+=======
+  "name": "playwright-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.13"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+>>>>>>> 6e5c087 (Initial commit - Playwright setup)
 }
