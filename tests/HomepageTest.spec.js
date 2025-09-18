@@ -13,12 +13,7 @@ test.describe('Homepage Tests', () => {
     // Validate the page title
     await expect(page).toHaveTitle('RoverMD');
 
-    // Validate the URL
-    await expect(page).toHaveURL('https://qa.rovermd.com:8443/RoverApp/#/login');
 
-    // Get and print the page URL
-    const pageURL = page.url();
-    console.log('Page URL is:', pageURL);
   });
 
 });

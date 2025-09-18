@@ -16,5 +16,24 @@ test.describe('Locators Tests', () => {
 
     // Assert successful login (example: check for dashboard URL)
     await expect(page).toHaveURL('https://qa.rovermd.com:8443/RoverApp/#/rovermd/dashboard');
+
+    // Locate all anchor links
+  const links = page.locator('a');
+
+  // Print each link text and href
+  const count = await links.count();
+  console.log(`Found ${count} links.`);
+
+  for (let i = 0; i < count; i++) {
+    const text = await links.nth(i).innerText();
+    const href = await links.nth(i).getAttribute('href');
+    console.log(`Link ${i + 1}: Text="${text}", Href="${href}"`);
+  }
+
+  // ✅ Correct assertion
+  expect(count).toBeGreaterThan(0);
+
+
+
   });
 });
