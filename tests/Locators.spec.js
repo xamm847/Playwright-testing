@@ -6,15 +6,15 @@ test.describe('Locators Tests', () => {
     await page.setViewportSize({ width: 1920, height: 1080 });
 
     // Fill username
-    await page.fill('input[name="username"]', 'your-username');
+    await page.fill('input[type="text"]', 'awais605'); 
 
     // Fill password
-    await page.fill('input[name="password"]', 'your-password');
+    await page.fill('input[type="password"]', 'Lio@12345');
 
     // Click login button
-    await page.click('button[type="submit"]');
+    await page.click('button:has-text("Login")'); 
 
-    // Assert successful login (example: check for dashboard element)
-    await expect(page).toHaveURL(/dashboard|home/i);
+    // Assert successful login (example: check for dashboard URL)
+    await expect(page).toHaveURL('https://qa.rovermd.com:8443/RoverApp/#/rovermd/dashboard');
   });
 });
